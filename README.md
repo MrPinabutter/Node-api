@@ -1,2 +1,2 @@
 <h1> Node API </h1>
-<p> Estudos de node pelo skylab do rocketseat </p>
+<p> Estudos sobre o uso do nodejs em aplicações back-end para desesnvolvimento </p>
