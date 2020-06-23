@@ -23,8 +23,12 @@ app.get('/cad', (req, res)=>{
 
 app.post('/add', (req, res)=>{
     Post.create({
-        titulo:req.body.titulo,
+        titulo: req.body.titulo,
         conteudo: req.body.conteudo 
+    }).then(() => {
+        res.send("Post criado com sucesso!")
+    }).catch((erro) => {
+        res.send("Falha no envio do Post: " + erro)
     })
 })
 
