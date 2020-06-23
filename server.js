@@ -1,6 +1,7 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
+const Post = require('./models/Post')
 
 
 const app = express();
@@ -21,10 +22,11 @@ app.get('/cad', (req, res)=>{
 })
 
 app.post('/add', (req, res)=>{
-    res.send(`Titulo: ${req.body.titulo}, Conteúdo: ${req.body.conteudo}`)
-    res.body.conteudo
+    Post.create({
+        titulo:req.body.titulo,
+        conteudo: req.body.conteudo 
+    })
 })
-
 
 // Ouvindo a porta 3001 do navegador
 app.listen(8081);
