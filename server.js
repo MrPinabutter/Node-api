@@ -1,16 +1,11 @@
 const express = require('express');
 const handlebars = require('express-handlebars');
 const bodyParser = require('body-parser');
-const Sequelize = require('sequelize').Sequelize;
 
 
 const app = express();
 
-// Conexão com o banco de dados
-const sequelize = new Sequelize('sistemadecadastro', 'root', 'r2d2c3poj', {
-    host:"localhost",
-    dialect: 'mysql'
-})
+
 // Configurando o template engine (Handlebars)
 app.engine('handlebars', handlebars({defaultLayout: 'main'})) // main => template padrão da aplicação
 app.set('view engine', 'handlebars')
