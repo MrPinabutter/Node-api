@@ -7,5 +7,6 @@
     <li>MySQL</li>
     <li>Sequelize</li>
     <li>Handlebars</li>
+    <li>body-parser</li>
   </strong>
 </ul>
